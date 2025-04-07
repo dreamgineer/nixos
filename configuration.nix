@@ -348,7 +348,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/dgnr/nix";
+    flake = "/etc/nixos";
   };
 
   # Hyprland
