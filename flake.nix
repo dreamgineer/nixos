@@ -7,7 +7,7 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
     wpilib.url = "github:frc4451/frc-nix";
-    thorium.url = "git+file:///etc/nixos/programs/thorium/";
+    thorium.url = "path:./programs/thorium/";
     nix-alien.url = "github:thiagokokada/nix-alien";
   };
   outputs =

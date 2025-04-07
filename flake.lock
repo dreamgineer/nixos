@@ -208,17 +208,14 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1743994874,
+        "lastModified": 1,
         "narHash": "sha256-W09X3yfmlN67TtS0Higtkq5ILNgnTYSACsHNr4EBhXc=",
-        "ref": "refs/heads/main",
-        "rev": "946d5eb896f74bfa902f1ce5b6f6f5961fd7734a",
-        "revCount": 12,
-        "type": "git",
-        "url": "file:///etc/nixos/programs/thorium/"
+        "path": "./programs/thorium/",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:///etc/nixos/programs/thorium/"
+        "path": "./programs/thorium/",
+        "type": "path"
       }
     },
     "wpilib": {
