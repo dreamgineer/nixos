@@ -214,11 +214,11 @@
         "rev": "946d5eb896f74bfa902f1ce5b6f6f5961fd7734a",
         "revCount": 12,
         "type": "git",
-        "url": "file:///home/dgnr/Scripts/nix-thorium"
+        "url": "file:///etc/nixos/programs/thorium/"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/dgnr/Scripts/nix-thorium"
+        "url": "file:///etc/nixos/programs/thorium/"
       }
     },
     "wpilib": {
