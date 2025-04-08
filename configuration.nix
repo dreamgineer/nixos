@@ -52,6 +52,8 @@
       "vm.swappiness" = 20;
     };
     initrd.systemd.enable = true;
+
+    supportedFilesystems = [ "ntfs" ];
   };
 
   networking.hostName = "nyx"; # Define your hostname.
@@ -324,8 +326,8 @@
   fileSystems = {
     "/mnt/data" = {
       device = "/dev/disk/by-uuid/D83224E63224CB78";
-      fsType = "ntfs3";
-      options = [ "nofail" ];
+      fsType = "ntfs";
+      options = [ "nofail" "rw" "big_writes" "lazytime" ];
     };
   };
 
@@ -341,9 +343,6 @@
     };
   };
 
-  # Development tools
-  services.lorri.enable = true;
-
   programs.nh = {
     enable = true;
     clean.enable = true;
@@ -351,9 +350,9 @@
     flake = "/etc/nixos";
   };
 
+  programs.mtr.enable = true;
+  services.system76-scheduler.enable = true;
+
   # Hyprland
   programs.hyprland.enable = true;
-  services.fprintd = {
-    enable = true;
-  };
 }
