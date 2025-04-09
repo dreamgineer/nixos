@@ -192,7 +192,7 @@
     kdePackages.qtdeclarative
     ktailctl
     nodejs_20
-
+    tpm2-tss
     where-is-my-sddm-theme
     # Hyprland
     kitty
