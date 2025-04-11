@@ -1,4 +1,4 @@
-{ pkgs }: {
+{ pkgs, ... }: {
   systemd.services.godns = {
     description = "GoDNS Service";
     after = [ "network.target" ];
