@@ -29,7 +29,9 @@
 
           # comma & nix-index
           nix-index-database.nixosModules.nix-index
-          { programs.nix-index-database.comma.enable = true; } # Add WPILib packages
+          { programs.nix-index-database.comma.enable = true; }
+
+          # Add WPILib packages
           (
             {
               pkgs,
@@ -59,6 +61,9 @@
               programs.nix-ld.enable = true;
             }
           )
+
+          # GoDNS systemd service
+          ./programs/godns/service.nix
         ];
       };
     };

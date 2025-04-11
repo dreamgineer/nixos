@@ -1,0 +1,21 @@
+{
+  "provider": "Cloudflare",
+  "login_token": "je3jdDrqaLeuReSnoxHqAfXGmryGXa0z70v4FeJc",
+  "domains": [
+    {
+      "domain_name": "dgnr.us",
+      "sub_domains": ["nyxip"]
+    }
+  ],
+  "resolver": "1.1.1.1",
+  "ip_urls": ["https://icanhazip.com"],
+  "ip_type": "IPv4",
+  "interval": 300,
+  "socks5_proxy": "",
+  "web_panel": {
+    "enabled": true,
+    "addr": "0.0.0.0:9000",
+    "username": "dreamgineer",
+    "password": "verysecure123"
+  }
+}

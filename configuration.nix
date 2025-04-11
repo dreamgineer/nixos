@@ -148,6 +148,8 @@
       gh
       spotube
       inshellisense
+
+      godns
       #  thunderbird
     ];
   };
