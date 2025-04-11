@@ -26,6 +26,7 @@
         specialArgs = { inherit self system; };
         modules = [
           ./configuration.nix
+          ./modules
 
           # comma & nix-index
           nix-index-database.nixosModules.nix-index
