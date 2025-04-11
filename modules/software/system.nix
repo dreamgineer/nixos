@@ -6,6 +6,8 @@
   nix = {
     daemonCPUSchedPolicy = "idle";
     daemonIOSchedClass = "idle";
+    optimise.automatic = true;
+    settings.auto-optimise-store = true;
   };
 
   # Enable auto-upgrades.
