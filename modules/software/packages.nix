@@ -15,19 +15,7 @@
     nodejs_20
     tpm2-tss
     where-is-my-sddm-theme
-    # Hyprland
     kitty
-    wofi
-    hyprpaper
-    hyprpolkitagent
-    hyprshot
-    waybar
-    nerd-fonts.code-new-roman
-    gnome-keyring
-    hyprlock
-    hypridle
-    pavucontrol
-    brightnessctl
   ];
 
   services.flatpak.enable = true;

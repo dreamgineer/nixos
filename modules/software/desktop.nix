@@ -20,4 +20,17 @@
 
   # Hyprland
   programs.hyprland.enable = true;
+  environment.systemPackages = with pkgs; [
+    wofi
+    hyprpaper
+    hyprpolkitagent
+    hyprshot
+    waybar
+    nerd-fonts.code-new-roman
+    gnome-keyring
+    hyprlock
+    hypridle
+    pavucontrol
+    brightnessctl
+  ];
 }
