@@ -208,15 +208,14 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-77UBBGXn83ZNJY+VQXupOeuSlfbzIxd/2sQU84RMF6o=",
         "path": "./programs/thorium/",
         "type": "path"
       },
       "original": {
         "path": "./programs/thorium/",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "wpilib": {
       "inputs": {
