@@ -18,7 +18,7 @@
       git
       vesktop
       fastfetch
-      nil
+      nixd
       nixfmt-rfc-style
       element-desktop
       blackbox-terminal
