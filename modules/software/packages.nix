@@ -7,8 +7,6 @@
     #  wget
     vscode
     plymouth
-    wineWowPackages.full
-    distrobox
     bun
     zulu23
     ntfs3g

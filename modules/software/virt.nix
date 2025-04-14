@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
@@ -12,4 +12,9 @@
     unitConfig.After = lib.mkForce "docker.socket firewalld.service containerd.service time-set.target";
   };
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+
+  environment.systemPackages = with pkgs; [
+    wineWowPackages.full
+    distrobox
+  ];
 }
