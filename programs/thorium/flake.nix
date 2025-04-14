@@ -9,9 +9,7 @@
     ...
   }: {
     ##### x86_64-linux #####
-    packages.x86_64-linux = let
-      pkgs = import nixpkgs {system = "x86_64-linux";};
-    in {
+    packages.x86_64-linux = {
       thorium-avx = let
         pkgs = import nixpkgs {system = "x86_64-linux";};
         name = "thorium-avx";
