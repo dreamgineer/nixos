@@ -102,11 +102,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743911143,
-        "narHash": "sha256-4j4JPwr0TXHH4ZyorXN5yIcmqIQr0WYacsuPA4ktONo=",
+        "lastModified": 1744518957,
+        "narHash": "sha256-RLBSWQfTL0v+7uyskC5kP6slLK1jvIuhaAh8QvB75m4=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "a36f6a7148aec2c77d78e4466215cceb2f5f4bfb",
+        "rev": "4fc9ea78c962904f4ea11046f3db37c62e8a02fd",
         "type": "github"
       },
       "original": {
@@ -133,11 +133,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1743964447,
-        "narHash": "sha256-nEo1t3Q0F+0jQ36HJfbJtiRU4OI+/0jX/iITURKe3EE=",
+        "lastModified": 1744463964,
+        "narHash": "sha256-LWqduOgLHCFxiTNYi3Uj5Lgz0SR+Xhw3kr/3Xd0GPTM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "063dece00c5a77e4a0ea24e5e5a5bd75232806f8",
+        "rev": "2631b0b7abcea6e640ce31cd78ea58910d31e650",
         "type": "github"
       },
       "original": {
@@ -209,7 +209,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-W09X3yfmlN67TtS0Higtkq5ILNgnTYSACsHNr4EBhXc=",
+        "narHash": "sha256-77UBBGXn83ZNJY+VQXupOeuSlfbzIxd/2sQU84RMF6o=",
         "path": "./programs/thorium/",
         "type": "path"
       },
