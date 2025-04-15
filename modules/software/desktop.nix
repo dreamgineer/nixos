@@ -32,5 +32,6 @@
     hypridle
     pavucontrol
     brightnessctl
+    dunst
   ];
 }
