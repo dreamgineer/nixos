@@ -46,65 +46,68 @@
       nixpkgs.overlays = [ nixpkgs-wayland.overlay ];
 
       # replace 'nyx' with your hostname here.
-      nixosConfigurations.nyx = nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-        specialArgs = { inherit self system winapps; };
-        modules = [
-          ./configuration.nix
-          ./modules
-          (
-            { pkgs, ... }:
-            {
-              environment.systemPackages = with pkgs; [ cachix ];
-            }
-          )
+      nixosConfigurations = nixpkgs.lib.genAttrs [ "nyx" "nixos" ] (
+        hostname:
+        nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = { inherit self system winapps; };
+          modules = [
+            ./configuration.nix
+            ./modules
+            (
+              { pkgs, ... }:
+              {
+                environment.systemPackages = with pkgs; [ cachix ];
+              }
+            )
 
-          # comma & nix-index
-          nix-index-database.nixosModules.nix-index
-          { programs.nix-index-database.comma.enable = true; }
+            # comma & nix-index
+            nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
 
-          # Add WPILib packages
-          (
-            { ... }:
-            {
-              environment.systemPackages = [
-                wpilib.packages.${system}.glass
-                wpilib.packages.${system}.advantagescope
-                wpilib.packages.${system}.vscode-wpilib
-                thorium.packages.${system}.default
-              ];
-            }
-          )
+            # Add WPILib packages
+            (
+              { ... }:
+              {
+                environment.systemPackages = [
+                  wpilib.packages.${system}.glass
+                  wpilib.packages.${system}.advantagescope
+                  wpilib.packages.${system}.vscode-wpilib
+                  thorium.packages.${system}.default
+                ];
+              }
+            )
 
-          # nix-alien
-          (
-            { self, pkgs, ... }:
-            {
-              nixpkgs.overlays = [
-                self.inputs.nix-alien.overlays.default
-              ];
-              environment.systemPackages = with pkgs; [
-                nix-alien
-              ];
-              # Optional, needed for `nix-alien-ld`
-              programs.nix-ld.enable = true;
-            }
-          )
+            # nix-alien
+            (
+              { self, pkgs, ... }:
+              {
+                nixpkgs.overlays = [
+                  self.inputs.nix-alien.overlays.default
+                ];
+                environment.systemPackages = with pkgs; [
+                  nix-alien
+                ];
+                # Optional, needed for `nix-alien-ld`
+                programs.nix-ld.enable = true;
+              }
+            )
 
-          # GoDNS systemd service
-          ./programs/godns/service.nix
+            # GoDNS systemd service
+            ./programs/godns/service.nix
 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.dgnr = import ./modules/home;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-          }
-        ];
-      };
+            #home-manager.nixosModules.home-manager
+            #{
+            #  home-manager.useGlobalPkgs = true;
+            #  home-manager.useUserPackages = true;
+            #
+            #  home-manager.users.dgnr = import ./modules/home;
+            #
+            # # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            #}
+          ];
+        }
+      );
     };
   nixConfig = {
     # add binary caches
