@@ -2,6 +2,5 @@
   imports = [
     ./hardware
     ./software
-    ./home
   ];
 }

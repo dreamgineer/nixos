@@ -7,5 +7,6 @@
     ./system.nix
     ./users.nix
     ./virt.nix
+    ./windows
   ];
 }
