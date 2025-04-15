@@ -19,11 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
-
-    # only needed if you use as a package set:
-    nixpkgs-wayland.inputs.nixpkgs.follows = "nixpkgs";
-
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,14 +32,10 @@
       wpilib,
       thorium,
       home-manager,
-      nixpkgs-wayland,
       winapps,
       ...
     }:
     {
-      # use it as an overlay
-      nixpkgs.overlays = [ nixpkgs-wayland.overlay ];
-
       # replace 'nyx' with your hostname here.
       nixosConfigurations = nixpkgs.lib.genAttrs [ "nyx" "nixos" ] (
         hostname:
@@ -54,12 +45,6 @@
           modules = [
             ./configuration.nix
             ./modules
-            (
-              { pkgs, ... }:
-              {
-                environment.systemPackages = with pkgs; [ cachix ];
-              }
-            )
 
             # comma & nix-index
             nix-index-database.nixosModules.nix-index
@@ -109,17 +94,4 @@
         }
       );
     };
-  nixConfig = {
-    # add binary caches
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
-    substituters = [
-      "https://cache.nixos.org"
-      "https://nix-community.cachix.org"
-      "https://nixpkgs-wayland.cachix.org"
-    ];
-  };
 }
