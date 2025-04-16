@@ -1,7 +1,7 @@
 { config, ... }:
 {
-  services.hyprlock.enable = true;
-  services.hyprlock.settings = {
+  programs.hyprlock.enable = true;
+  programs.hyprlock.settings = {
     "$text_color" = "rgba(FFDAD6FF)";
     "$entry_background_color" = "rgba(41000311)";
     "$entry_border_color" = "rgba(896E6C55)";

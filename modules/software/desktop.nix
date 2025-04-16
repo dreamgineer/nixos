@@ -29,7 +29,6 @@
     hyprshot
     nerd-fonts.code-new-roman
     gnome-keyring
-    hypridle
     pavucontrol
     brightnessctl
   ];
