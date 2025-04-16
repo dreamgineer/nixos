@@ -3,13 +3,15 @@
   imports = [ ./wofi.nix ];
 
   wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland.systemd.extraCommands = [
+    "kitty & hyprpaper & waybar & hypridle & gnome-keyring-daemon & systemctl --user start hyprpolkitagent & hyprlock"
+  ];
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
     "$menu" = "wofi -i --show run,drun";
 
-    exec-once = "$terminal & hyprpaper & waybar & hypridle & gnome-keyring-daemon & systemctl --user start hyprpolkitagent";
     monitor = ",preferred,auto,auto";
 
     # General settings

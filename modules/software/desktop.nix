@@ -12,6 +12,8 @@
   services.displayManager.sddm.wayland.compositor = "kwin";
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.defaultSession = "hyprland";
+  services.displayManager.sddm.autoLogin.enable = true;
+  services.displayManager.sddm.autoLogin.user = "dgnr";
 
   # Configure keymap in X11
   services.xserver.xkb = {
