@@ -1,7 +1,7 @@
 { ... }:
 {
   services.hypridle.enable = true;
-  programs.hypridle.settings = {
+  services.hypridle.settings = {
     "$lock_cmd" = "pidof hyprlock || hyprlock";
     "$suspend_cmd" = "pidof steam || systemctl suspend || loginctl suspend"; # fuck nvidia
 
