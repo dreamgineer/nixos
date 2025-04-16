@@ -18,6 +18,7 @@
     (sddm-astronaut.override { embeddedTheme = "black_hole";})
     kdePackages.qtmultimedia
     kitty
+    playerctl
   ];
 
   services.flatpak.enable = true;
