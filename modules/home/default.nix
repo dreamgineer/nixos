@@ -11,6 +11,10 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = ''
+      # Don't run this in non-interactive shells
+      # home-manager initialization timeout workaround
+      [[ $- == *i* ]] || return
+
       if [ "$TERM_PROGRAM" != "vscode" ]; then
           [ -f ~/.inshellisense/bash/init.sh ] && source ~/.inshellisense/bash/init.sh
           is && clear

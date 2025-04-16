@@ -7,8 +7,11 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme = "where_is_my_sddm_theme";
+  services.displayManager.sddm.theme = "sddm-astronaut-theme";
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.wayland.compositor = "kwin";
+  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.defaultSession = "hyprland";
 
   # Configure keymap in X11
   services.xserver.xkb = {

@@ -78,18 +78,15 @@
               }
             )
 
-            # GoDNS systemd service
+            # GoDNS systemd service1
             ./programs/godns/service.nix
 
-            #home-manager.nixosModules.home-manager
-            #{
-            #  home-manager.useGlobalPkgs = true;
-            #  home-manager.useUserPackages = true;
-            #
-            #  home-manager.users.dgnr = import ./modules/home;
-            #
-            # # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-            #}
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.dgnr = import ./modules/home;
+
+              # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            }
           ];
         }
       );

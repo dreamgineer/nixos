@@ -15,6 +15,8 @@
     nodejs_20
     tpm2-tss
     where-is-my-sddm-theme
+    (sddm-astronaut.override { embeddedTheme = "black_hole";})
+    kdePackages.qtmultimedia
     kitty
   ];
 
