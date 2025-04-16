@@ -1,0 +1,31 @@
+{ ... }:
+{
+  services.hypridle.enable = true;
+  programs.hypridle.settings = {
+    "$lock_cmd" = "pidof hyprlock || hyprlock";
+    "$suspend_cmd" = "pidof steam || systemctl suspend || loginctl suspend"; # fuck nvidia
+
+    general = {
+      lock_cmd = "$lock_cmd";
+      before_sleep_cmd = "loginctl lock-session";
+    };
+
+    listener = [
+      {
+        timeout = 180; # 3mins
+        on-timeout = "loginctl lock-session";
+      }
+
+      {
+        timeout = 240; # 4mins
+        on-timeout = "hyprctl dispatch dpms off";
+        on-resume = "hyprctl dispatch dpms on";
+      }
+
+      {
+        timeout = 540; # 9mins
+        on-timeout = "$suspend_cmd";
+      }
+    ];
+  };
+}

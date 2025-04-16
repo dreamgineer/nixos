@@ -32,6 +32,7 @@
   };
 
   security.sudo.wheelNeedsPassword = false;
+  security.pam.services.hyprlock = {};
 
   nix.settings.trusted-users = [ "root" "dgnr" ];
 }

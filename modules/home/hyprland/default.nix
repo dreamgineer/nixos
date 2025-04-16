@@ -1,10 +1,17 @@
 { ... }:
 {
-  imports = [ ./wofi.nix ./waybar.nix ];
+  imports = [
+    ./wofi.nix
+    ./waybar.nix
+    ./hyprpaper.nix
+    ./services.nix
+    ./hypridle.nix
+    ./hyprlock.nix
+  ];
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.extraCommands = [
-    "hyprlock & kitty & hyprpaper & waybar & hypridle & dunst & gnome-keyring-daemon & systemctl --user start hyprpolkitagent"
+    "hyprlock & kitty & hyprpaper & waybar & gnome-keyring-daemon"
   ];
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
