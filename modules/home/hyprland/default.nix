@@ -1,6 +1,6 @@
 { ... }:
 {
-  imports = [ ./wofi.nix ];
+  imports = [ ./wofi.nix ./waybar.nix ];
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.extraCommands = [
