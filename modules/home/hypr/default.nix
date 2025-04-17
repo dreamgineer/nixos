@@ -11,7 +11,7 @@
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.extraCommands = [
-    "hyprlock & kitty & gnome-keyring-daemon & systemctl --user start hyprpolkitagent hypridle hyprpaper waybar dunst"
+    "hyprlock & waybar & kitty & gnome-keyring-daemon & systemctl --user start hyprpolkitagent hypridle hyprpaper dunst"
   ];
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
