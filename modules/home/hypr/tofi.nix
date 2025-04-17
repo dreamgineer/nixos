@@ -9,7 +9,7 @@
     font = "monospace";
     font-size = 14;
     outline-width = 0;
-    border-wirth = 0;
+    border-width = 0;
     background-color = "#000000";
     horizontal = true;
     min-input-width = 120;
