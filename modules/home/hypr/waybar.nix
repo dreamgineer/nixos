@@ -49,10 +49,10 @@
         format-alt = "{:%Y-%m-%d}";
       };
       cpu = {
-        format = "{usage}% ";
+        format = "{usage}%  ";
       };
       memory = {
-        format = "{}% ";
+        format = "{}%  ";
       };
       battery = {
         bat = "BAT0";
