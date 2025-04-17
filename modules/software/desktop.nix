@@ -31,5 +31,8 @@
     gnome-keyring
     pavucontrol
     brightnessctl
+    hyprpaper
+    hyprpolkitagent
+    hypridle
   ];
 }
