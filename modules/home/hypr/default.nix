@@ -17,7 +17,8 @@
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
-    "$menu" = "tofi";
+    "$menud" = "tofi-drun";
+    "$menu" = "tofi-run";
 
     monitor = ",preferred,auto,auto";
 
@@ -119,7 +120,8 @@
         "$mod, M, exit,"
         "$mod, E, exec, $fileManager"
         "$mod, V, togglefloating,"
-        "$mod, R, exec, $menu"
+        "$mod, R, exec, $menud"
+        "$mod SHIFT, R, exec, $menu"
         "$mod, P, pseudo,"
         "$mod, J, togglesplit,"
         "$mod, left, movefocus, l"

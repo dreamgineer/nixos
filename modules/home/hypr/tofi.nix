@@ -3,7 +3,7 @@
   programs.tofi.enable = true;
   programs.tofi.settings = {
     anchor = "bottom";
-    height = 18;
+    height = 20;
     width = "100%";
     prompt-text = " > ";
     font = "monospace";
@@ -19,5 +19,6 @@
     padding-left = 0;
     padding-right = 0;
     drun-launch = true;
+    selection-color = "#00aeff";
   };
 }
