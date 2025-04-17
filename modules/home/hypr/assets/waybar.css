@@ -17,11 +17,6 @@ window#waybar {
   padding: 0 15px;
   margin: 2px 0;
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
   padding: 0 5px;
@@ -112,10 +107,6 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-}
-
-#hyprland-window {
-  color: rgb(4, 224, 240);
 }
 
 #mpris {
