@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./wofi.nix
+    ./tofi.nix
     ./waybar.nix
     ./hyprpaper.nix
     ./services.nix
