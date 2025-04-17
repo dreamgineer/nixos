@@ -111,14 +111,14 @@
       };
       mpris = {
         format = "{dynamic} {player_icon}";
-        format-paused = "{dynamic} {status_icon}";
+        format-paused = "<i>{dynamic}</i> {status_icon}";
         dynamic-len = 30;
         player-icons = {
-          default = "▶";
-          mpv = "🎵";
+          default = "";
+          mpv = "󰎆";
         };
         status-icons = {
-          paused = "⏸";
+          paused = "";
         };
       };
     }
