@@ -17,7 +17,7 @@
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
-    "$menu" = "wofi -i --show run,drun";
+    "$menu" = "tofi";
 
     monitor = ",preferred,auto,auto";
 
@@ -155,8 +155,8 @@
       ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-      ",XF86MonBrightnessDown, exec, brightnesssctl s 10%-"
+      ",XF86MonBrightnessUp, exec, brightnessctl s 10%+;hyprctl notify 1 2000 0 \"Brightness increased\""
+      ",XF86MonBrightnessDown, exec, brightnesssctl s 10%-;hyprctl notify 1 2000 0 \"Brightness reduced\""
     ];
     bindl = [
       # Requires playerctl
