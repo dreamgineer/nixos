@@ -1,7 +1,10 @@
 { ... }:
 {
-  imports = [ ./hypr ./programs ];
-  
+  imports = [
+    ./hypr
+    ./programs
+  ];
+
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
@@ -22,6 +25,29 @@
           is && clear
           [ "$ISTERM" != "1" ] && exit
       fi
+
+      nixon() {
+        local json_input="$1"
+        local tmpfile
+
+        # Create a secure temporary file
+        tmpfile=$(mktemp /tmp/nixon.XXXXXX.json) || {
+          echo "Failed to create temp file" >&2
+          return 1
+        }
+
+        # Clean up the file on exit
+        trap 'rm -f "$tmpfile"' EXIT
+
+        # Write the JSON input to the file
+        printf "%s" "$json_input" > "$tmpfile"
+
+        # Evaluate JSON via nix
+        nix-instantiate --eval -E "builtins.fromJSON (builtins.readFile \"$tmpfile\")"
+
+        # Cleanup happens on function exit
+      }
+
     '';
 
     # set some aliases, feel free to add more or remove some
