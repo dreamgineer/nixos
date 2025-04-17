@@ -112,6 +112,7 @@
       mpris = {
         format = "{dynamic} {player_icon}";
         format-paused = "<i>{dynamic}</i> {status_icon}";
+        dynamic-len = 30;
         player-icons = {
           default = "▶";
           mpv = "🎵";
