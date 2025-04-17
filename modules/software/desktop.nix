@@ -28,7 +28,6 @@
   environment.systemPackages = with pkgs; [
     hyprshot
     nerd-fonts.code-new-roman
-    gnome-keyring
     pavucontrol
     brightnessctl
     hyprpaper
