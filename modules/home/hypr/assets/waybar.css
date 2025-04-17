@@ -1,0 +1,126 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Ubuntu Nerd Font";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+#window {
+  font-weight: bold;
+  font-family: "Ubuntu";
+  padding: 0 15px;
+  margin: 2px 0;
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: white;
+  border-top: 2px solid transparent;
+}
+
+#workspaces button.active {
+  color: #1c76fd;
+}
+
+#workspaces button.empty {
+  color: #555555;
+}
+
+#workspaces button.empty.active {
+  color: #345079;
+}
+
+#mode {
+  background: #64727d;
+  border-bottom: 3px solid white;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#mpris,
+#tray,
+#mode {
+  padding: 0 5px; /*3px*/
+  margin: 0 0; /*2px*/
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#battery {
+  background-color: #5a4b06;
+}
+
+#battery icon {
+  color: red;
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu {
+  background-color: #5f3606;
+}
+
+#memory {
+  background-color: #065711;
+}
+
+#network {
+  background-color: #063657;
+}
+
+#network.disconnected {
+  background: #f53c3c;
+}
+
+#pulseaudio {
+  background-color: #4f0552;
+}
+
+#pulseaudio.muted {
+}
+
+#hyprland-window {
+  color: rgb(4, 224, 240);
+}
+
+#mpris {
+  color: rgb(102, 220, 105);
+}
+
+#tray {
+}
