@@ -11,11 +11,11 @@
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.extraCommands = [
-    "hyprlock & waybar & kitty & gnome-keyring-daemon & systemctl --user start hyprpolkitagent hypridle hyprpaper dunst gnome-keyring"
+    "hyprlock & waybar & kitty nu & gnome-keyring-daemon & systemctl --user start hyprpolkitagent hypridle hyprpaper dunst gnome-keyring"
   ];
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
-    "$terminal" = "kitty";
+    "$terminal" = "kitty nu";
     "$fileManager" = "dolphin";
     "$menud" = "tofi-drun";
     "$menu" = "$(tofi-run)";
