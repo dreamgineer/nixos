@@ -18,7 +18,7 @@
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
     "$menud" = "tofi-drun";
-    "$menu" = "tofi-run";
+    "$menu" = "$(tofi-run)";
 
     monitor = ",preferred,auto,auto";
 
