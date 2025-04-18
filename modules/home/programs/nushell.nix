@@ -2,11 +2,11 @@
 {
   programs.nushell = {
     enable = true;
-    extraLogin = ''
-      if ( '~/.inshellisense/nu/init.nu' | path exists ) { source ~/.inshellisense/nu/init.nu }
-    '';
+    settings = {
+      show_banner = false;
+    };
     extraConfig = ''
-      show_banner = false
+      source ${builtins.toString ./assets/init.nu}
     '';
     shellAliases = {
       a = "nix-alien";
