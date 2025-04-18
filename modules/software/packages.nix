@@ -19,6 +19,7 @@
     kdePackages.qtmultimedia
     kitty
     playerctl
+    wl-clipboard
   ];
 
   services.flatpak.enable = true;

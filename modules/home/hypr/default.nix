@@ -19,6 +19,7 @@
     "$fileManager" = "dolphin";
     "$menud" = "tofi-drun";
     "$menu" = "$(tofi-run)";
+    "$util" = "bun ${builtins.toString ./util/index.ts}";
 
     monitor = ",preferred,auto,auto";
 
@@ -122,6 +123,7 @@
         "$mod, V, togglefloating,"
         "$mod, R, exec, $menud"
         "$mod SHIFT, R, exec, $menu"
+        "$mod, F, exec, $util"
         "$mod, P, pseudo,"
         "$mod, J, togglesplit,"
         "$mod, left, movefocus, l"
