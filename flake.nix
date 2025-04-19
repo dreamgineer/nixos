@@ -78,8 +78,11 @@
               }
             )
 
-            # GoDNS systemd service1
+            # GoDNS systemd service
             ./programs/godns/service.nix
+
+            # Steam
+            ./programs/steam
 
             home-manager.nixosModules.home-manager
             {
